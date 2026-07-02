@@ -1,0 +1,32 @@
+from selenium.webdriver.common.by import By
+
+class AuthPage:
+    LOGIN_REGISTRATION_BUTTON = (By.XPATH, "//button[text()='Вход и регистрация']")
+    NO_ACCOUNT_BUTTON = (By.XPATH, "//button[text()='Нет аккаунта']")
+    EMAIL_INPUT = (By.XPATH, "//input[@name='email']")
+    PASSWORD_INPUT = (By.XPATH, "//input[@name='password']")
+    CONFIRM_PASSWORD_INPUT = (By.XPATH, "//input[@name='submitPassword']")
+    CREATE_ACCOUNT_BUTTON = (By.XPATH, "//button[text()='Создать аккаунт']")
+    USER_NAME = (By.CSS_SELECTOR, ".profileText.name")
+    ERROR_MESSAGE = (By.XPATH, "//span[contains(@class, 'input_span')]")
+    INPUT_ERROR = (By.XPATH, "//div[contains(@class, 'input_inputError')]")
+    AVATAR = (By.CLASS_NAME, "svgSmall")
+    LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти']")
+    LOGOUT_BUTTON = (By.XPATH, "//button[text()='Выйти']")
+    PROFILE_BUTTON = (By.XPATH, "//button[contains(@class, 'circleSmall')]")
+    
+class AdPage:
+    CREATE_AD_BUTTON = (By.XPATH, "//button[text()='Разместить объявление']")
+    MODAL_TITLE = (By.XPATH, "//div[@class = 'popUp_titleRow__M7tGg']/h1[text() = 'Чтобы разместить объявление, авторизуйтесь']")
+    NAME_INPUT = (By.NAME, "name")
+    DESCRIPTION_INPUT = (By.XPATH, "//textarea[@placeholder='Описание товара']")
+    PRICE_INPUT = (By.NAME, "price")
+    CATEGORY_DROPDOWN = (By.XPATH, "//input[@name='category']/following-sibling::button")
+    CATEGORY_DROPDOWN_HOBBY = (By.XPATH, "//span[text()='Хобби']/parent::button")
+    CITY_DROPDOWN = (By.XPATH, "//input[@name='city']/following-sibling::button")
+    CITY_DROPDOWN_KAZAN = (By.XPATH, "//span[text()='Казань']/parent::button")
+    CONDITION_RADIO = (By.XPATH, "//label[contains(@class, 'h2') and text()='Б/У']")
+    PUBLISH_BUTTON = (By.XPATH, "//button[text()='Опубликовать']")
+    MY_ADS_BLOCK = (By.XPATH, "//h1[text()='Мои объявления']")
+    AD_CARD = (By.XPATH, "//div[contains(@class, 'card')]")
+    AD_DESCRIPTION = (By.XPATH, "//div[contains(@class, 'description')]//h2[@class='h2']")
